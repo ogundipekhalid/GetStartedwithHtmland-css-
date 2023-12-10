@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+</head>
+<style>
+    body{
+        font-family: sans-serif;
+    }
+    #shape {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        top: 180px;
+        display: none;
+        position: relative;
+    }
+    .bold{
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <h1>Text your reaction</h1>
+    <p>click on the box and circle as quick as you like</p>
+    <p>your time is : <span id="timetoken"></span></p>
+    <div id="shape"></div>
+    <script>
+        var start = new Date().getTime();
+        function getRandomColor() {
+            var letter = '0123456789ABCDEF'.split('');
+            var color = '#';
+            for (let i = 0; i < 6; i++) {
+                letter += letter[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        function makeshapeApper() {
+            var top = Math.random() * 400;
+            var left = Math.random() * 400;
+            var width = (Math.random() * 300) + 10;
+            if (Math.random() > 0.5) {
+                document.getElementById("shape").style.borderRadius = "50%";
+            }
+            else {
+                document.getElementById("shape").style.borderRadius = "0";
+
+            }
+
+            document.getElementById("shape").style.background = getRandomColor();
+            document.getElementById("shape").style.width = width + "px";
+            document.getElementById("shape").style.height = width + "px";
+            document.getElementById("shape").style.top = top + "px";
+            document.getElementById("shape").style.left = left + "px";
+            document.getElementById("shape").style.display = "block";
+            start = new Date().getTime();
+        }
+
+        function ApperAfterDelay() {
+            ///  document.getElementById("shape").style.display = "block";
+            ////  start = new Date().getTime();
+            setTimeout(makeshapeApper, Math.random() * 2000);
+
+        }
+        // setTimeout(makeshapeApper, Math.random() * 2000);
+        // makeshapeApper();
+        ApperAfterDelay();
+        document.getElementById("shape").onclick = function () {
+            document.getElementById("shape").style.display = "none";
+            var end = new Date().getTime();
+            var timetoken = (end - start) / 100;
+            // alert(timetoken);
+            document.getElementById("timetoken").innerHTML = timetoken + "s";
+            // getRandomColor();
+            // makeshapeApper();
+            ApperAfterDelay();
+        }
+
+    </script>
+</body>
+
+</html>

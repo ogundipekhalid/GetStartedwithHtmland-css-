@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div id="tweetdiv"></div> -->
+    <p>how many fingers am i holding up</p>
+    <select  id="numbers">
+        <option value="">0</option>
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+    </select>
+   <button id="guess">Guess</button>
+    </p>
+    <script>
+    // alert (guessNumber);
+    // var randomNumber = Math.floor(Math.random());
+    // var numbers = randomNumber;
+        document.getElementById("guess").onclick = function ()
+         {
+            var guessNumber = document.getElementById("numbers").value
+            var getit = false;
+            var numberOfguess = 1;
+            while (getit == false) {
+                var guess = Math.random();
+                guess = guess*6;
+                guess = Math.floor(guess);
+            }
+            if (guess == guessNumber) 
+            {
+                getit = true;
+                alert("guess  tryout was " + guess + "correct no was", guessNumber);
+            } 
+            else {
+                numberOfguess++;
+            }
+        }
+
+
+        // var tweetString = "";
+        // var tweet = ["hello everyone", "have some Chocolate", "what poping" , "good Night"]
+        // for (var i = 0; i < tweet.length; i++) {
+
+        //     // alert(tweet[i]);
+        //     tweetString = tweetString+ "<p>" + tweet[i] + "</p>";
+        // }
+        // document.getElementById("tweetdiv").innerHTML = tweetString;
+    </script>
+</body>
+
+</html>

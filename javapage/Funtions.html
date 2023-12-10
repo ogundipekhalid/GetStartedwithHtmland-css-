@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>how Many Finger do you see</p>
+        <p><select id="myNumber">
+            <option value="">0</option>
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+            <option value="">5</option>
+        </select>
+    <button id="guess"> ButonGuess</button>
+</p>
+    <script>
+        function doGuess(correctAnswer) {
+            var guess = Math.random()
+            guess = Math.floor(guess);
+            if (guess == correctAnswer) {
+                return (true);
+            } else{
+                return (false);
+            }       
+        }
+        document.getElementById("guess").onclick = function()
+        {
+            var myNumber = document.getElementById("myNumber").value;
+            var gotIt = false;
+            var numberOfguess = 1;
+            while (gotIt == false) 
+            {
+                if (doGuess(myNumber) == true)
+                {
+                    gotIt = true;
+                    alert("got it it was a  (" + myNumber + ")it took me " + numberOfguess+ "guesse");
+                }
+                else
+                {
+                    numberOfguess ++;
+                }
+            }
+        }
+        // function Average(a , b) {
+        //     return (a + b) / 2;
+        // }
+        // var x = 5;
+        // var y = 10;
+        // alert(Average(x,y))
+    </script>
+</body>
+</html>

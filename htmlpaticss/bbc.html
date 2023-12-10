@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBC NEWS</title>
+    <style type="text/css">
+        #topbar {
+            width: 1050px;
+            margin: 0 auto;
+            height: 50px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #logo {
+            margin: 16px;
+            width: 80px;
+            float: left;
+            border: 20px;
+        }
+
+        .topbar-sections {
+            float: left;
+            border-left: 1px #cccccc solid;
+            height: 50px;
+        }
+
+        #siginimage {
+            width: 25px;
+            top: 10;
+            margin: 10px 12px;
+            border-radius: 19px;
+            float: left;
+        }
+
+        #Signin-text {
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 10px;
+            position: relative;
+            font-size: 90%;
+            top: 10px;
+            float: left;
+            padding-right: 40px;
+            border-right: 2px solid #cccccc;
+        }
+
+        .topbar-menu {
+            float: left;
+            font-weight: bold;
+            font-size: 90%;
+            margin: 10px;
+            height: 20px;
+            padding: 10px 10px;
+            border: none;
+        }
+
+        #moreImage {
+            width: 35px;
+            margin-left: -200px;
+            /* float: left; */
+            margin-left: 2px;
+            display: block;
+            border: none;
+        }
+
+        #search-bar {
+            margin-top: 10px;
+            width: 77px;
+            float: left;
+            height: 25px;
+            display: flex;
+            flex-grow: 20px;
+            justify-content: center;
+        }
+
+        #magnifayer {
+            width: 20px;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        #menu-bar-container {
+            border-top: 1px solid #cccccc;
+            background-color: #b80000;
+            width: 100%;
+            height: 75px;
+        }
+
+        #menu-bar {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            padding: 0;
+            margin: 0;
+            font-size: 40px;
+            color: white;
+            font-weight: normal;
+            padding-top: 10px;
+            float: left;
+        }
+
+        #local-news {
+            border: 1px #bb4545 solid;
+            float: right;
+            width: 240px;
+            padding: 5px 5px 0 10px;
+            margin: 5px 10px 0 0;
+
+        }
+
+        #local-news a {
+            /* margin-top: 8px; */
+            top: -10px;
+            padding-right: 9px;
+            color: white;
+            text-decoration: none;
+            font-size: 30px;
+            position: relative;
+        }
+
+        #local-news a:hover {
+            text-decoration: underline;
+        }
+
+        #local-news img {
+
+            width: 25px;
+            height: 40px;
+        }
+
+        #menu-bar-2 {
+            width: 100px;
+            margin: 0 auto;
+            height: 40px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #menu-bar-2-container {
+            background-color: #bb1919;
+            width: 100%;
+
+        }
+
+        #menu-bar-2 a {
+            color: white;
+            text-decoration: none;
+            padding: 1px solid #a32929;
+            font-size: 11px;
+            position: relative;
+            top: 5px;
+        }
+
+        #menu-bar-2 a:hover {
+            text-decoration: none;
+
+        }
+
+        #main-article {}
+
+        #page-container {
+            height: 100px;
+            width: 0 auto;
+        }
+
+        h2 {
+            margin-top: 40px;
+            font-size: 20px;
+            padding-left: 10px;
+            width: 105px;
+            border-bottom: 2px solid #bb4545;
+        }
+
+        #article-summary a:hover {
+            color: #1167a8;
+        }
+
+        #topic-link {
+            text-decoration: none;
+            color: #bb4545;
+            border-left: 1px solid #cccccc;
+            padding-left: 10px;
+        }
+
+        #date {
+            padding-right: 10px;
+        }
+
+        #article-summary {
+            color: #5a5a5a;
+            width: 850px;
+            font-size: 20px;
+            float: right;
+            padding-left: 20px;
+
+        }
+
+        #article-summary img {
+            position: relative;
+        }
+
+        #article-container {
+            float: left;
+            width: 900px;
+            border-right: 1px solid #cccccc;
+            /* padding-right: px; */
+        }
+
+        #main-article-image {
+            width: 500px;
+            /* height: 100px; */
+            margin-right: 20px;
+            float: left;
+            float: top;
+
+        }
+
+        #article-hr {
+            /* color: #a91717; */
+            color: red;
+            width: 40px;
+        }
+
+        #article-link {
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="topbar">
+        <img id="logo" src="bbcc logo/BBClogo.GIF" alt="">
+        <div id="singin-div" class="topbar-sections">
+            <img id="siginimage" src="bbcc logo/humanoptions.GIF">
+            <span id="Signin-text">Sign In </span>
+        </div>
+
+        <div class="topbar-sections topbar-menu">
+            Home
+        </div>
+        <div class="topbar-sections topbar-menu">
+            News
+        </div>
+        <div class="topbar-sections topbar-menu">
+            Sport
+        </div>
+        <div class="topbar-sections topbar-menu">
+            Reels
+        </div>
+        <div class="topbar-sections topbar-menu">
+            WorkLife
+        </div>
+        <div class="topbar-sections topbar-menu">
+            Travel
+        </div>
+        <div class="topbar-sections topbar-menu">
+            Future
+        </div>
+        <div class="topbar-sections topbar-menu">
+            Culture
+        </div>
+        <div class="topbar-sections topbar-menu">
+            <img id="moreImage" src="bbcc logo/there dot options.GIF" alt="">
+        </div>
+        <div class="topbar-sections ">
+            <!-- <img id="magnifayer" src="bbcc logo/magnifaying glass.GIF" alt=""> -->
+            <input type="search" value="search" id="search-bar" alt="">
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div id="menu-bar-container">
+        <div id="menu-bar">
+            <h1>News</h1>
+            <div id="local-news">
+                <a href="">Find local new</a>
+                <img src="bbcc logo/pointer.GIF" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div id="menu-bar-2-container">
+        <div id="menu-bar-2">
+            <a> Home </a>
+            <a href=""> War in Ukrine</a>
+            <!-- <a href=""> Climate</a> -->
+            <!-- <a href="">world</a>
+            <a href="">uk</a>
+            <a href="">Business</a>
+            <a href="">Tech</a>
+            <a href="">Entertainment & Art</a>
+            <a href="">Health</a>
+            <a href="">World News Tv</a>
+            <a href="">In Picture</a>
+            <a href="">BBC Verify </a>
+            <a href="">NewsBeat</a> -->
+
+        </div>
+
+    </div>
+
+    <div class="clear"></div>
+
+    <div id="page-container">
+        <div id="main-article">
+            <h2>Technology</h2>
+            <div id="article-container">
+                <div id="article-summary">
+                    <img id="main-article-image" src="bbcc logo/firstpicture.GIF" alt="">
+                    <h3 id="paragraph"> Google’s face-altering photo tool sparks AI manipulation debate</h3>
+                    <p id="paragraph">A new breed of smartphone tools are raising fresh questions about what it means to
+                        photograph
+                        reality.</p>
+                    <hr id="article-hr" align="left" >
+                    <p id="paragraph"><a id="article-link" href="">Insidethe exhausted Gazan city with a millionmouths
+                            to feed</a></p>
+                    <p id="paragraph"><span id="date"> 19 january</span><a id="topic-link" href="">Technology</a></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- border-right: 1px solid #cccccc; -->
+
+    <div class="clear"></div>
+
+    <div class="">
+
+    </div>
+
+
+</body>
+
+</html>

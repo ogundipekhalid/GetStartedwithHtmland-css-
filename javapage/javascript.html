@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+</head>
+
+<body>
+
+    <!-- <button onclick="alert('Hi khal')">Click Me</button> -->
+    <p id="text">hello world</p>
+    <button id="myButton">Change button </button>
+    <p id="secoundparagraph">JavaScript is ....</p>
+    <button id="secoundButton">Change button </button>
+    <p id="emptyparagraph"></p>
+    <button id="createparagraph">Change button </button>
+    <p id="diapartext"> Color Change text</p>
+    <button id="styleletext">Style text </button>
+
+
+
+    <script type="text/Javascript">
+        
+        // alert('page IS Loading');
+        // document.getElementById("text").innerHTML="hello ken"
+    document.getElementById("myButton").onclick = function() 
+    { // alert('heloo kan');
+        document.getElementById("text").innerHTML="hello ken"}
+
+    document.getElementById("secoundButton").onclick = function() 
+    {// alert('heloo kan');
+        document.getElementById("secoundparagraph").innerHTML= document.getElementById("secoundparagraph").innerHTML + "nice"}
+   
+    document.getElementById("createparagraph").onclick = function() 
+    {  // alert('heloo kan');
+        // document.getElementById("emptyparagraph").innerHTML= document.getElementById("emptyparagraph").innerHTML + "here paragraph"
+        
+        document.getElementById("emptyparagraph").innerHTML="prAGRAPH"
+    }
+    document.getElementById("styleletext").onclick = function()
+    {
+        document.getElementById("diapartext").style.display = "none";
+    }
+
+
+
+    </script>
+</body>
+
+</html>

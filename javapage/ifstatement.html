@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        #GuessFinger{
+            /* float: right; */
+            top: 50px;
+            /* padding-left: 60px; */
+            
+
+        }
+    </style>
+<body>
+    <!-- <p>what is the magic word</p>
+    <p><input type="text"  id="magicWord"></p>
+    <p><button id="checkingmagicWord">Enter</button></p> -->
+    <!-- clw -->
+     <p>how many fingers am i holding up</p>
+    <p><input type="text"  id="numbers"> <button id="GuessFinger">Guess</button></p>
+    <!-- <p><input type="text"  id="numbers"></p><button id="GuessFinger">Guess</button> -->
+   
+   <script>
+
+
+        //alert(Math.floor( Math.random() *5));
+             // clw
+        document.getElementById("GuessFinger").onclick = function ()
+        {
+            var guessNumber = document.getElementById("numbers").value
+            // alert (guessNumber);
+             var randomNumber =  Math.floor(Math.random() * 10);
+            var numbers = randomNumber
+            if (guessNumber == numbers) {
+            alert ("correct no was" , guessNumber );
+            }else {
+            alert(" not correct was", guessNumber);
+            }
+        }
+
+        // document.getElementById("checkingmagicWord").onclick = function() {
+        //     var gmagicWordEnter = document.getElementById("magicWord").value
+        //     // alert (gmagicWordEnter);
+        //     var magicWord = "purse";
+        //     if (gmagicWordEnter == magicWord) {
+        //     alert ("correct");
+        //     } else{
+        //     alert("not correct");
+
+        //     }
+        // }
+
+
+        // var x = 1;
+        // if (x == 1) {
+        //     alert("x is 1");
+            
+        // }else{
+        //     alert("x is not  1");
+        // }
+
+    </script>
+</body>
+</html>

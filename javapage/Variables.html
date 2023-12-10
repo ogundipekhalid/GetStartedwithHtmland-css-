@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+</head>
+
+<body>
+    <input type="text" id="textInput">
+    <button id="button">Chage the text </button>
+    <h3><p id="text">This is some text</p></h3>
+ 
+    <script type="text/Javascript">
+        // var x = 5 ;
+        // // x = 20;
+        // alert(x)
+        document.getElementById("button").onclick = function() {
+            // document.getElementById("text").innerHTML = "text update";
+            var ExternaInput = "";
+            ExternaInput = document.getElementById("textInput").value;
+            document.getElementById("text").innerHTML = ExternaInput;
+            // alert("net text")
+        }
+
+    </script>
+</body>
+
+</html>
